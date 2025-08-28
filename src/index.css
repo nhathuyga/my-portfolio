@@ -84,7 +84,15 @@ code {
   border-radius: 20px;
   font-size: 14px;
   font-weight: 500;
-  margin: 4px;
+  margin: 0;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+  background: #e2e8f0;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Animation Classes */

@@ -22,12 +22,16 @@ const Header: React.FC = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <span className="gradient-text">Nguyễn Thanh Long</span>
+            <span className="gradient-text" onClick={scrollToTop}>Nguyễn Thanh Long</span>
           </div>
           
           <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>

@@ -1,41 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Contact.css';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Contact: React.FC = () => {
-  const contactRef = useScrollAnimation();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! I will get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
-
   return (
-    <section className="contact section" id="contact" ref={contactRef}>
+    <section className="contact" id="contact">
       <div className="container">
-        <div className="section-header animate-on-scroll animate-up stagger-1">
+        <div className="section-header">
           <h2 className="section-title">Get In Touch</h2>
           <p className="section-subtitle">Let's work together</p>
         </div>
         
         <div className="contact-content">
-          <div className="contact-info animate-on-scroll animate-left stagger-2">
+          <div className="contact-info">
             <h3>Let's Connect</h3>
             <p>
               I'm always interested in new opportunities and exciting projects. 
@@ -43,7 +19,7 @@ const Contact: React.FC = () => {
             </p>
             
             <div className="contact-details">
-              <div className="contact-item animate-on-scroll animate-up stagger-3">
+              <div className="contact-item">
                 <div className="contact-icon">📧</div>
                 <div className="contact-text">
                   <h4>Email</h4>
@@ -51,7 +27,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
               
-              <div className="contact-item animate-on-scroll animate-up stagger-4">
+              <div className="contact-item">
                 <div className="contact-icon">📱</div>
                 <div className="contact-text">
                   <h4>Phone</h4>
@@ -59,7 +35,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
               
-              <div className="contact-item animate-on-scroll animate-up stagger-5">
+              <div className="contact-item">
                 <div className="contact-icon">📍</div>
                 <div className="contact-text">
                   <h4>Location</h4>
@@ -79,58 +55,6 @@ const Contact: React.FC = () => {
                 <span>Portfolio</span>
               </a>
             </div>
-          </div>
-          
-          <div className="contact-form animate-on-scroll animate-right stagger-2">
-            <form onSubmit={handleSubmit}>
-              <div className="form-group animate-on-scroll animate-up stagger-3">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              
-              <div className="form-group animate-on-scroll animate-up stagger-4">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              
-              <div className="form-group animate-on-scroll animate-up stagger-5">
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              
-              <div className="form-group animate-on-scroll animate-up stagger-5">
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  rows={5}
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                ></textarea>
-              </div>
-              
-              <button type="submit" className="btn btn-primary animate-on-scroll animate-up stagger-5">
-                Send Message
-              </button>
-            </form>
           </div>
         </div>
       </div>

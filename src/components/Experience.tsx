@@ -1,10 +1,7 @@
 import React from 'react';
 import './Experience.css';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Experience: React.FC = () => {
-  const experienceRef = useScrollAnimation();
-
   const experiences = [
     {
       id: 1,
@@ -25,16 +22,16 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <section className="experience section" id="experience" ref={experienceRef}>
+    <section className="experience" id="experience">
       <div className="container">
-        <div className="section-header animate-on-scroll animate-up stagger-1">
+        <div className="section-header">
           <h2 className="section-title">Work Experience</h2>
           <p className="section-subtitle">My professional journey</p>
         </div>
         
         <div className="experience-timeline">
           {experiences.map((exp, index) => (
-            <div key={exp.id} className={`timeline-item animate-on-scroll animate-left stagger-${index + 2}`}>
+            <div key={exp.id} className="timeline-item">
               <div className="timeline-content">
                 <div className="timeline-header">
                   <h3 className="company-name">{exp.company}</h3>

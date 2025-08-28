@@ -1,20 +1,17 @@
 import React from 'react';
 import './About.css';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const About: React.FC = () => {
-  const aboutRef = useScrollAnimation();
-
   return (
-    <section className="about section" id="about" ref={aboutRef}>
+    <section className="about" id="about">
       <div className="container">
-        <div className="section-header animate-on-scroll animate-up stagger-1">
+        <div className="section-header">
           <h2 className="section-title">About Me</h2>
           <p className="section-subtitle">Get to know me better</p>
         </div>
         
         <div className="about-content">
-          <div className="about-text animate-on-scroll animate-left stagger-2">
+          <div className="about-text">
             <h3>Passionate Front-end Developer</h3>
             <p>
               I'm a dedicated Front-end Developer with over 3 years of experience in building 
@@ -29,7 +26,7 @@ const About: React.FC = () => {
             </p>
             
             <div className="about-highlights">
-              <div className="highlight animate-on-scroll animate-up stagger-3">
+              <div className="highlight">
                 <div className="highlight-icon">🎯</div>
                 <div className="highlight-content">
                   <h4>Performance Optimizer</h4>
@@ -37,7 +34,7 @@ const About: React.FC = () => {
                 </div>
               </div>
               
-              <div className="highlight animate-on-scroll animate-up stagger-4">
+              <div className="highlight">
                 <div className="highlight-icon">🚀</div>
                 <div className="highlight-content">
                   <h4>Quick Learner</h4>
@@ -45,7 +42,7 @@ const About: React.FC = () => {
                 </div>
               </div>
               
-              <div className="highlight animate-on-scroll animate-up stagger-5">
+              <div className="highlight">
                 <div className="highlight-icon">🤝</div>
                 <div className="highlight-content">
                   <h4>Team Player</h4>
@@ -55,7 +52,7 @@ const About: React.FC = () => {
             </div>
           </div>
           
-          <div className="about-image animate-on-scroll animate-right stagger-2">
+          <div className="about-image">
             <div className="about-card">
               <div className="about-avatar">
                 <div className="avatar-placeholder">

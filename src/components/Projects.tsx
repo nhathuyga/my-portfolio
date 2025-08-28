@@ -89,14 +89,6 @@ const Projects: React.FC = () => {
                     <span key={techIndex} className="skill-tag">{tech}</span>
                   ))}
                 </div>
-                <div className="project-links">
-                  <a href={project.liveUrl} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                    Live Demo
-                  </a>
-                  <a href={project.githubUrl} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                    View Code
-                  </a>
-                </div>
               </div>
             </div>
           ))}

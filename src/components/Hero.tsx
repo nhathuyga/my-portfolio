@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
                 View My Work
               </button>
               <button 
-                className="btn btn-secondary"
+                className="btn btn-outline"
                 onClick={() => scrollToSection('contact')}
               >
                 Get In Touch

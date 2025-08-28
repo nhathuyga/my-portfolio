@@ -1,5 +1,8 @@
 .about {
   background: white;
+  padding: 4rem 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 .section-header {
@@ -26,6 +29,7 @@
   grid-template-columns: 2fr 1fr;
   gap: 4rem;
   align-items: start;
+  padding: 0 1rem;
 }
 
 .about-text h3 {
@@ -163,5 +167,145 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.25rem;
+  }
+}
+
+/* Mobile-first responsive design for small screens */
+@media (max-width: 480px) {
+  .about {
+    padding: 2rem 1rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .about-content {
+    gap: 1.5rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .about-card {
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+  }
+
+  .about-avatar .avatar-placeholder {
+    width: 70px;
+    height: 70px;
+    font-size: 1.25rem;
+  }
+
+  .about-details h4 {
+    font-size: 1.2rem;
+  }
+
+  .info-item {
+    padding: 0.75rem 0;
+  }
+}
+
+/* Extra small screens (375px and below) */
+@media (max-width: 375px) {
+  .about {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .about-content {
+    gap: 1.25rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.875rem;
+  }
+
+  .about-card {
+    padding: 1.25rem;
+    margin: 0 0.25rem;
+    border-radius: 12px;
+  }
+
+  .about-avatar .avatar-placeholder {
+    width: 60px;
+    height: 60px;
+    font-size: 1.1rem;
+  }
+
+  .about-details h4 {
+    font-size: 1.1rem;
+  }
+
+  .about-details > p {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .info-item {
+    padding: 0.625rem 0;
+  }
+
+  .info-label {
+    font-size: 0.9rem;
+  }
+
+  .info-value {
+    font-size: 0.9rem;
+  }
+
+  .highlight {
+    margin-bottom: 1.25rem;
+  }
+
+  .highlight-icon {
+    font-size: 1.5rem;
+    margin: auto;
+  }
+
+  .highlight-content h4 {
+    font-size: 1.1rem;
+  }
+
+  .highlight-content p {
+    font-size: 0.9rem;
   }
 }
